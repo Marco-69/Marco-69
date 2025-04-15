@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Personal</title>
+    <!-- Enlace al CDN de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace a Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <style>
+        .img-container {
+            display: flex;
+            align-items: center; /* Centra verticalmente la imagen */
+            justify-content: center; /* Centra horizontalmente la imagen */
+        }
+        .img-container img {
+            max-width: 100%; /* Ajusta el ancho máximo al 100% del contenedor */
+            height: auto; /* Mantiene la proporción de la imagen */
+            border-radius: 10px; /* Añade bordes redondeados */
+        }
+        .card {
+            height: 100%; /* Ajusta la altura de la tarjeta al 100% del contenedor */
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centra el contenido verticalmente */
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de navegación fija -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mi Portafolio, M@rko V@rg@s</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre-mi">Sobre mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#proyectos">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección "Sobre mí" -->
+    <section id="sobre-mi" class="container mt-5 pt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card h-100"> <!-- Ajusta la altura de la tarjeta al 100% -->
+                    <div class="card-body">
+                        <h5 class="card-title">Sobre mí</h5>
+                        <p class="card-text">
+                            ¡Hola! Soy Marco, soy metódico, detallista y orientado a la eficiencia y claridad en tanto aspectos técnicos como personales. 
+                            Disfruto descomponer tareas complejas en pasos manejables y busco asesoría estructurada y práctica. 
+                        </p>
+                        <a href="#contacto" class="btn btn-primary">Contáctame</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 img-container"> <!-- Contenedor para la imagen -->
+                <img src="img/mi-foto.jpg" class="img-fluid rounded" alt="Mi foto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrusel de imágenes (Proyectos destacados) -->
+    <section id="proyectos" class="container mt-5">
+        <h2 class="text-center mb-4">Proyectos Destacados</h2>
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src= "img/metodico.png" class="d-block w-100" alt="Proyecto Metodico">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/eficiencia.png" class="d-block w-100" alt="Proyecto Eficiencia">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/naturaleza.png" class="d-block w-100" alt="Proyecto Naturaleza">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section id="contacto" class="container mt-5">
+        <h2 class="text-center mb-4">Contacto</h2>
+        <form>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<footer class="bg-dark  text-white text-center py -3 mt-4">
+    <p> 2025 M@rko V@rg@s Todos los derechos reservados</p>
+</footer>
+</body>
+</html>
